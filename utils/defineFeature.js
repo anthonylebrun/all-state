@@ -1,8 +1,8 @@
-import { useNamespacedStore } from "~/composables/useGlobalStore";
+import { usePatataStore } from "~/composables/usePatataStore";
 
 export default function defineFeature(namespace, composableFn) {
   return () => {
-    const state = useNamespacedStore(namespace);
+    const state = usePatataStore(namespace);
     return composableFn(state);
   };
 }
